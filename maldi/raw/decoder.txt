@@ -1,0 +1,62 @@
+Name	Matrix		Verdünnung
+	DHB	CHCA
+A	3-5	10-12	E-7 	!!(bei DHB vermutlich falsche Konz.)
+B	3-5	10-12	E-6
+C	1-3	10-12	E-5
+D	1-3	10-12	E-4	!!hier der Vergl.S/HR	!! im Protokoll anpassen!
+
+-H12 Phosphor zur Kalibrierung -Kalibrierung über bekannte Peaks von dem
+
+-Was ist mit dem dritten Modus? Einfach nicht benutzt?
+
+Zeilenweise im output, jeweils 734, dann 760:
+A04_S.txt		DHB-7S
+A05_S.txt		DHB-7S
+B04_S.txt		DHB-6S
+C02_S.txt		DHB-5S
+C11_S.txt		CHC-5S
+D02_Oben_HR.txt		DHB-4H
+D02_Oben_S.txt		DHB-4S
+D02_Unten_HR.txt	DHB-4H
+D03_HR.txt		DHB-4H
+D03_Oben_S.txt		DHB-4S
+D03_Unten_S.txt		DHB-4S
+D11_Oben_HR.txt		CHC-4H
+D11_Unten_S.txt		CHC-4S
+D12_Oben_HR.txt		CHC-4H
+D12_Unten_HR.txt	CHC-4H
+D12_Unten_S.txt		CHC-4S
+
+doppelt:
+
+A04_S.txt		DHB-7S
+
+A05_S.txt		DHB-7S
+
+B04_S.txt		DHB-6S
+
+C02_S.txt		DHB-5S
+
+C11_S.txt		CHC-5S
+
+D02_Oben_HR.txt		DHB-4H
+
+D02_Oben_S.txt		DHB-4S
+
+D02_Unten_HR.txt	DHB-4H
+
+D03_HR.txt		DHB-4H
+
+D03_Oben_S.txt		DHB-4S
+
+D03_Unten_S.txt		DHB-4S
+
+D11_Oben_HR.txt		CHC-4H
+
+D11_Unten_S.txt		CHC-4S
+
+D12_Oben_HR.txt		CHC-4H
+
+D12_Unten_HR.txt	CHC-4H
+
+D12_Unten_S.txt		CHC-4S
