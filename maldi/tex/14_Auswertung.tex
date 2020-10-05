@@ -2,11 +2,10 @@
 \section{Auswertung}
 
 \subsection{Lipide}
-%TODO konnte ich die Konzentrationen irgendwie überführen? denke nicht, aber so ist komisch -> vorher erklären
-%TODO Beispielspektrum
 
-Untersucht wurden im Folgenden die Peaks von PC(32:0)+H bei \SI{734.562} und PC(34:1)+H bei \SI{760,578}, wobei \enquote{+H} meint, dass die Masse jeweils aufgrund der Aufnahme eines Protons um \SI{1}{u} erhöht wurde.
-In \cref{fig_broken} sind zwei Massenspektren dargestellt, die sich insofern von den meisten aufgenommenen Spektren unterscheiden, als dass ein starkes Untergrundsignal vorliegt, welches auf Verunreinigungen in der Probe zurückzuführen ist.
+Untersucht wurden im Folgenden die Peaks von [PC(32:0)+H]$^+$ bei \SI{734.562}{} und [PC(34:1)+H]$^+$ bei \SI{760,578}{}.
+In \cref{fig_broken} sind zwei Massenspektren dargestellt, die sich insofern von den meisten aufgenommenen Spektren unterscheiden, als dass ein starkes Untergrundsignal vorliegt, welches entweder auf Verunreinigungen in der Probe zurückzuführen ist.
+Auch denkbar ist, dass bei sehr geringer Analytkonzentration mehr Untergrund ionisiert und gemessen wird.
 In \cref{fig_very_broken} sind dabei die zu untersuchenden Peaks nicht mehr zu erkennen, weshalb dieses und ein weiteres Spektrum dieser Art nicht verwendet werden können.
 Im Gegensatz dazu ist in \cref{fig_fine_broken} das Signal noch deutlich zu erkennen, weshalb die sechs Spektren dieser Art ausgewertet werden.
 
@@ -15,13 +14,13 @@ Im Gegensatz dazu ist in \cref{fig_fine_broken} das Signal noch deutlich zu erke
     \begin{subfigure}{0.495\textwidth}
         \centering
         \includegraphics[width=1.0\textwidth]{img/b11_S_broken}
-        \caption{CHCA $10^{-6}$}
+        \caption{CHCA $10^{-6}$ \si{\mole \per \liter}}
         \label{fig_very_broken}
     \end{subfigure}
     \begin{subfigure}{0.495\textwidth}
         \centering
         \includegraphics[width=1.0\textwidth]{img/C11_S_broken_but_fine}
-        \caption{CHCA $10^{-5}$}
+        \caption{CHCA $10^{-5}$ \si{\mole \per \liter}}
         \label{fig_fine_broken}
     \end{subfigure}
     \caption{Zwei Massenspektren mit großem Untergrundsignal bei Matrix CHCA und unterschiedlichen Analytkonzentrationen. Beide im S-Modus.}
@@ -34,7 +33,7 @@ Aus den Fit-Parametern werden Signalstärke, Peakposition (Masse-zu-Ladung-Verh�
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.6\textwidth]{img/a04_S_gaussfit}
-    \caption{Gauß-Fit bei Matrix DHB und einer Analytkonzentration von $10^{-7}$.}
+    \caption{Gauß-Fit bei Matrix DHB und einer Analytkonzentration von $10^{-7}$ \si{\mole \per \liter}.}
     \label{fig_gaussfit}
 \end{figure}
 
@@ -49,7 +48,7 @@ Es ist auch sichtbar, dass die Standardunsicherheit im S-Modus um etwa eine Grö
 
 \begin{table}[H]
 	\centering
-	\caption{Ergebnisse aus den Fits ausgewählter Peaks in den Massenspektren nach Matrix und Modus des Flugzeitspektrometers. Die Verdünnungsstufe beträgt $10^{-4}$.}
+	\caption{Ergebnisse aus den Fits ausgewählter Peaks in den Massenspektren nach Matrix und Modus des Flugzeitspektrometers. Die Verdünnungsstufe beträgt $10^{-4}$ \si{\mole \per \liter}.}
 	   \begin{tabular}{c | c | c | c }
       Modus & Matrix & $m/z$ & Massenauflösung $R$ \\ \hline
       S & CHCA & \SI{734,56818 \pm 0,00018}{} & \SI{12717 \pm 57}{} \\
@@ -65,18 +64,21 @@ Es ist auch sichtbar, dass die Standardunsicherheit im S-Modus um etwa eine Grö
 \end{table}
 
 Nun soll noch Massengenauigkeit und Massenrichtigkeit bei verschiedenen Verdünnungsstufen verglichen werden.
+Hierfür wird der Sensitivity-Modus verwendet, weil hier ein besseres Signal-Rausch-Verhältnis zu erwarten ist und die Massenauflösung auch hier groß genug ist, um die betrachteten Peaks eindeutig voneinander trennen zu können.
 Die Massengenauigkeit wird wie oben über die Standardunsicherheit bestimmt.
 Wenn nur ein Spektrum zur Verfügung steht, wird die Unsicherheit, die sich aus dem Fit ergibt, verwendet.
 In diesem Fall werden die Daten mit einem $*$ gekennzeichnet.
 Für die Massenrichtigkeit wird die Differenz zwischen Mittelwert der gemessenen Masse-zu-Ladung-Verhältnisse und dem erwarteten exakten Masse-zu-Ladung-Verhältnis des jeweiligen Moleküls gebildet.
-Da für die exakte Masse des Moleküls Werte mit drei Nachkommastellen verwendet werden, ergibt sich für die Massenrichtigkeit eine zusätzliche digitale Unsicherheit von $\approxeq \SI{0.0003}{}$.
+Da für die exakte Masse des Moleküls Werte mit drei Nachkommastellen angegeben wurden, ergibt sich für die Massenrichtigkeit eine zusätzliche digitale Unsicherheit von $\approxeq \SI{0.0003}{}$.
 Außerdem wird das Signal-Rausch-Verhältnis bestimmt, indem die Höhe des gefitteten Gauß-Peaks durch die Größe des lokalen konstanten Untergrunds geteilt wird.
+Wie in \cref{fig_gaussfit} zu erkennen ist, ist die Annahme eines konstanten Untergrund in guter Näherung gerechtfertigt und da die betrachteten Peaks deutlich voneinander getrennt sind, ist auch nicht zu befürchten, dass ein Teil der Höhe der Peaks auf eine Überlappung mit anderen Peaks zurückzuführen ist.
+In einigen Fällen treten jedoch deutlich kleinere Peaks im Bereich des lokalen Fits auf, die mittels dieser Methode nur als Anteil am konstanten Untergrund gewertet werden.
 Auch hier wird, wenn möglich, ein Mittelwert verwendet und die Standardunsicherheit angegeben.
 Die Ergebnisse sind in \cref{tab:verduennungen} aufgeführt.
 
 \begin{table}[H]
 	\centering
-	\caption{Massengenauigkeit, -richtigkeit und Signal-Rausch-Verhältnis (SRV) aus den Fits ausgewählter Peaks in den Massenspektren nach Matrix und Verdünnungsstufe. Die Spektren wurden im Sensitivity-Modus aufgenommen. $*$ markiert, wenn für die Berechnung nur ein Spektrum zur Verfügung steht, weshalb hier der Fehler aus dem Fit verwendet wird.}
+	\caption{Massengenauigkeit, -richtigkeit und Signal-Rausch-Verhältnis (SRV) aus den Fits ausgewählter Peaks in den Massenspektren nach Matrix und Verdünnungsstufe. Die Spektren wurden im Sensitivity-Modus aufgenommen. $*$ markiert, wenn für die Berechnung nur ein Spektrum zur Verfügung steht, weshalb hier der Fehler aus dem Fit verwendet wird. Verdünnung in \si{\mole \per \liter}}
 	   \begin{tabular}{c | c | c | c  | c | c}
       Verd. & Matrix & $m/z$ & Massenrichtigkeit & SRV \\ \hline
       $10^{-4}$ & CHCA & \SI{734,56818 \pm 0,00018}{} & \SI{0,00619 \pm 0,00034}{} & \SI{110,3 \pm 3,4}{}\\
@@ -102,25 +104,25 @@ Dies kann jedoch aufgrund mangelnder Spektren nur an zwei Verdünnungsstufen fes
 Bei der Massenrichtigkeit ist kein signifikanter Trend zu erkennen.
 Dies ist nicht verwunderlich, da die Massenrichtigkeit vor allem von der Kalibrierung abhängt, welche für alle aufgenommenen Spektren gleich ist.
 
-Anhand der Daten für die Verdünnungsstufen $10^{-4}$, $10^{-5}$ und $10^{-6}$ lässt sich feststellen, dass das Signal-Rausch-Verhältnis mit der Analytkonzentration deutlich abnimmt.
-Bei DHB wurde bei der Verdünnungsstufe von $10^{-7}$ vermutlich ein Fehler in der Präparation gemacht, da hier der Trend gebrochen wird und das Signal-Rausch-Verhältnis wieder deutlich ansteigt
+Anhand der Daten für die Verdünnungsstufen $10^{-4}$, $10^{-5}$ und $10^{-6}$ \si{\mole \per \liter} lässt sich feststellen, dass das Signal-Rausch-Verhältnis mit der Analytkonzentration deutlich abnimmt.
+Bei DHB wurde bei der Verdünnungsstufe von $10^{-7}$ \si{\mole \per \liter} vermutlich ein Fehler in der Präparation gemacht, da hier der Trend gebrochen wird und das Signal-Rausch-Verhältnis wieder deutlich ansteigt
 \par
 
-Anhand der vorherigen Ergebnisse wird als Spektrum mit optimalen Bedingungen für ein Übersichtsbild DHB bei einer Verdünnungsstufe von $10^{-4}$ im Sensitivity-Modus gewählt.
+Anhand der vorherigen Ergebnisse wird als Spektrum mit optimalen Bedingungen für ein Übersichtsbild DHB bei einer Verdünnungsstufe von $10^{-4}$ \si{\mole \per \liter} im Sensitivity-Modus gewählt.
 In \cref{fig_gesamtspekt} ist dieses Spektrum dargestellt und der rote Ausschnitt ist in \cref{fig:teilspekt} vergrößert dargestellt.
-Dort wurden die Peaks den Peptiden im Analyten bei Aufnahme der Masse eines Wasserstoff-, Natrium- oder Kaliumatoms zugeordnet.
+Dort wurden die Peaks den verschiedenen Lipidspezies zugeordnet.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=1\textwidth]{img/overview-D02_Oben_S}
-    \caption{Gemessenes Gesamtspektrum bei Matrix DHB, Verdünnungsstufe $10^{-4}$ und im Sensitivity-Modus.}
+    \caption{Gemessenes Gesamtspektrum bei Matrix DHB, Verdünnungsstufe $10^{-4}$ \si{\mole \per \liter} und im Sensitivity-Modus.}
     \label{fig_gesamtspekt}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=1\textwidth]{img/overview_zoom-D02_Oben_S}
-    \caption{Annotierter Ausschnitt aus dem gemessenen Spektrum bei Matrix DHB, Verdünnungsstufe $10^{-4}$ und im Sensitivity-Modus.}
+    \caption{Annotierter Ausschnitt aus dem gemessenen Spektrum bei Matrix DHB, Verdünnungsstufe $10^{-4}$ \si{\mole \per \liter} und im Sensitivity-Modus.}
     \label{fig:teilspekt}
 \end{figure}
 
@@ -158,6 +160,7 @@ Dabei wurden die Ionen mit $m/z$ von \SI{838.60667}{} und \SI{872.52693} ausgew�
 
 Die gelben astförmigen Strukturen im oberen Bereich können leicht als Arbor Vitae identifiziert werden, welcher umgeben von der in Rot sichtbaren Kleinhirnrinde (cerebellar cortex) ist.
 Im unteren Bereich ist in Gelb die Medulla zu erkennen, während der  vierte Hirnventrikel in der Mitte beide ausgewählte Ionen nur in geringer Menge emittiert, also schwarz erscheint. %Groß/klein schwierig, weil engliches Latein
+Die dunkle Schicht zwischen Kleinhirnrinde und Arbor Vitae ist die Körnerschicht.
 
 \begin{figure}[!ht]
     \centering
