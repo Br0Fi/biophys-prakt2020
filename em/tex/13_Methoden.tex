@@ -5,12 +5,66 @@
 \subsection{SEM}
 %sample preperation requirements: vakuum, conductive for sem, thin for tem etc.
 
+Die Rasterelektronenmikroskopie (SEM von engl. scanning electron microscopy) ist eine Technik zur hochauflösenden Untersuchung von Oberflächen.
+Sie wird in vielen Feldern eingesetzt, z.B. in Medizin, Materialwissenschaften, Halbleiterindustrie und forensischen Laboren.
+In \cref{fig:sem_schematic} ist schamatisch ein typischer Aufbau eines SEM dargestellt.
+Der auf die Probenebene fokussierte Elektronenstrahl wird rasterförmig über die Probe gefahren und verschiedene Detektoren können genutzt werden, um zeitgleich ein ortsaufgelöstes Bild der Probe aufzunehmen.
+Hier können Sekundärelektronen (SE), rückgestreute Elektronen (BSE von engl. backscattered electrons), transmittierte Elektronen (STEM von engl. scanning transmission electron microscopy), Kathodolumineszenz (CL) und Röntgenstrahlung (X-ray) detektiert werden. %TODO erwähnen, dass stem getrennt ist, falls das andere stem und nicht nur tem ist.
+Mit Ausnahme von STEM befinden sich die Detektoren oberhalb von der Probe, sodass nur die Oberfläche der Probe (bis zu unterschiedlicher Tiefe je nach Methdoe) untersucht wird und Dünnschnitt der Probe nicht nötig ist.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.65\textwidth]{img/sem_schematic}
+    \caption{
+    Schematische Darstellung eines konventionellen SEM.
+    Die evakuierte Mikroskopsäule (im gestrichelten Rahmen) beinhaltet die Elektronenkanone, elektromagnetische Linsen, Blenden, Probenebene und Detektoren. \cite{springer-handbook}
+    }
+    \label{fig:sem_schematic}
+\end{figure}
+
+Im Folgenden soll der Fokus auf Sekundärelektronen und rückgestreute Elektronen gelegt werden.
+Sekundärelektronen sind dadurch definiert, dass sie eine Energie von weniger als \SI{50}{eV} haben, während rückgestreute Elektronen darüber liegen.
+
+Rückgestreute Elektronen werden zu einem kleinen Teil dadurch erklärt, dass ein kleiner Teil der Primärelektronen mit hohem Streuwinkel $\theta > \SI{90}{\degree}$ in Richtung Elektronenkanone zurückgestreut werden und dabei wenig bis keine Energie verlieren.
+Da solche Streuprozesse jedoch relativ unwahrscheinlich sind, spielen im BSE-Signal Elektronen, die nach mehreren elastischen Streuprozessen die Probe verlassen die größere Rolle.
+Je nach Probeneigenschaften und Primärenergie ergibt sich eine maximale Austrittstiefe, aus der Elektronen nachgewiesen werden können.
+Üblicherweise befinden sich BSE-Detektoren auf einer Seite der Elektronenkanone, sodass Elektronen, die in diese Richtung austreten detektiert werden.
+Da dies bei Oberflächen, die dem Detektor zugewandt sind, wahrscheinlicher ist, ergibt sich ein oberflächenorientierungsabhängiges Signal, das mit einem Schattenwurf in Lichtbildaufnahmen vergleichbar ist.
+Außerdem nimmt die Wahrscheinlichkeit, dass Elektronen rückgestreut werden, mit der Ladungszahl zu, sodass BSE-Bilder chemischen Kontrast zeigen können (vgl. \cref{fig:bse-schatten}).
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.65\textwidth]{img/bse-example}
+    \caption{
+     Backscattered electron micrograph of a 1-mm steel ball. \cite{springer-handbook}
+    }
+    \label{fig:bse-schatten}
+\end{figure}
+
+Sekundärelektronen entstehen durch inelastische Streuung von hochenergetischen Elektronen mit Probenatomen.
+Hierbei wird Energie auf Elektronen in der Probe übertragen, welche aus ihrem Atompotenzial gelöst werden und danach die Energiedifferenz zwischen übertragener Energie und Ionisationsenergie als kinetische Energie besitzen.
+Ist die kinetische Energie ausreichend groß und findet die Ionisation ausreichend nah an der Probenoberfläche statt, kann das Elektron die Probe verlassen und nachgewiesen werden. %2nm
+Flächen, die nicht senkrecht zum Primärstrahl stehen begünstigen die Austrittswahrscheinlichkeit, wodurch SE-Bilder Informationen über die Topographie der Probe beinhalten.
+
+Der Detektor kann sowohl das Objektivlinsensystem des Primärstrahls nutzen (through-the-lens detection) und somit parallel zum Primärstrahl messen oder seitlich montiert sein.
+In beidem Fällen wird ein Spannungsgradient verwendet, um möglichst viele Elektronen \enquote{einzusammeln}.
+
 \subsection{Probenpräparation für SEM}
+
+%Leitfähigkeit
 
 \subsection{TEM}
 %sample preperation requirements: vakuum, conductive for sem, thin for tem etc.
 
 \subsection{Probenpräparation für TEM}
+
+
+\subsection{Astigmatismus} %TODO schauen, ob das Strukturell woanders besser passt und ob es ne eigene Überschrift braucht.
+
+Astigmatismus tritt sowohl im TEM als auch im SEM auf, wenn Elektronen in unterschiedlichen Bildrichtungen eine unterschiedliche Fokusebene haben.
+Astigmatismus entsteht durch Herrstellungsfehler in den Polstücken der Linsen.
+Ein hoher Astigmatismus sorgt für eine Verzerrung oder Unschärfe des Bildes in einer Bildrichtung. \cite{MyScope}
+Korrigieren lässt sich Astigmatismus durch Stigmatoren (Oktupole) in Kondensator- und Objektivlinsen, mithilfe deren man ein Feld aufbaut, das diese Herrstellungsfehler ausgleicht.
 
 \section{Durchführung}
 
