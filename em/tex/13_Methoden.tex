@@ -9,7 +9,7 @@ Sie wird in vielen Feldern eingesetzt, z.B. in Medizin, Materialwissenschaften, 
 In \cref{fig:sem_schematic} ist schamatisch ein typischer Aufbau eines SEM dargestellt.
 Der auf die Probenebene fokussierte Elektronenstrahl wird rasterförmig über die Probe gefahren und verschiedene Detektoren können genutzt werden, um zeitgleich ein ortsaufgelöstes Bild der Probe aufzunehmen.
 Hier können Sekundärelektronen (SE), rückgestreute Elektronen (BSE von engl. backscattered electrons), transmittierte Elektronen (STEM von engl. scanning transmission electron microscopy), Kathodolumineszenz (CL) und Röntgenstrahlung (X-ray) detektiert werden. %TODO erwähnen, dass stem getrennt ist, falls das andere stem und nicht nur tem ist.
-Mit Ausnahme von STEM befinden sich die Detektoren oberhalb von der Probe, sodass nur die Oberfläche der Probe (bis zu unterschiedlicher Tiefe je nach Methdoe) untersucht wird und Dünnschnitt der Probe nicht nötig ist.
+Mit Ausnahme von STEM befinden sich die Detektoren oberhalb von der Probe, sodass nur die Oberfläche der Probe (bis zu unterschiedlicher Tiefe je nach Methdoe) untersucht wird und ein Dünnschnitt der Probe nicht nötig ist.
 
 \begin{figure}[!ht]
     \centering
@@ -45,37 +45,93 @@ Hierbei wird Energie auf Elektronen in der Probe übertragen, welche aus ihrem A
 Ist die kinetische Energie ausreichend groß und findet die Ionisation ausreichend nah an der Probenoberfläche statt, kann das Elektron die Probe verlassen und nachgewiesen werden. %2nm
 Flächen, die nicht senkrecht zum Primärstrahl stehen begünstigen die Austrittswahrscheinlichkeit, wodurch SE-Bilder Informationen über die Topographie der Probe beinhalten.
 
-Der Detektor kann sowohl das Objektivlinsensystem des Primärstrahls nutzen (through-the-lens detection) und somit parallel zum Primärstrahl messen oder seitlich montiert sein.
+Der Detektor kann sowohl das Objektivlinsensystem des Primärstrahls nutzen (through-the-lens detection) und somit parallel zum Primärstrahl messen oder seitlich montiert sein, wobei ebenfalls ein virtueller Schattenwurf erzeugt wird, der größer ist, als bei rückgestreuten Elektronen.
 In beidem Fällen wird ein Spannungsgradient verwendet, um möglichst viele Elektronen \enquote{einzusammeln}.
 
 \subsection{Probenpräparation für SEM}
 %sample preperation requirements: vakuum, conductive for sem, thin for tem etc.
 %Leitfähigkeit
 
+Zunächst einmal ist es wichtig, dass dicke Proben (z.B. ganze Insekten) mit einer leitenden Schicht (üblicherweise Gold) beschichtet werden, um elektrostatische Aufladungen der untersuchten Stelle zu verhindern.
+
+Des Weiteren stellt sich bei biologischen Proben das Problem, dass, damit diese in die Vakuumkammer eingebracht werden können, Wasser aus der Probe entfernt werden muss.
+Wäre dies nicht der Fall, würde die Probe ins Vakuum ausgasen.
+Da Trocknung an der Luft häufig zu einer Zerstörung der zu untersuchenden Strukturen führt, gibt es Methoden, die Struktur der Probe während der Fixierung möglichst gut zu erhalten.
+
+Die Methode der chemischen Fixierung verwendet verschiedene Chemikalien (u.a. Glutaraldehyd, Formaldehyd, and Acrolein), um Verbindungen zwischen Aminosäuren, Proteinen und Lipiden herzustellen (üblicherweise durch kovalente Bindungen). \cite{bitesize}
+Diese Chemikalien werden in einer Pufferlösung (isotonische Trägerflüssigkeit) eingebracht, um so die Morphologie der Probe zu erhalten.
+Um dann das Wasser aus der Probe zu Verdrängen wird dieses zuerst langsam durch Ethanol (oder Aceton) ersetzt und dann in einer Druckkammer durch flüssiges CO$^2$.
+Der Zwischenschritt über Ethanol ist nötig, da sich CO$^2$ nicht mit Wasser lösen lässt.
+Dann wird ausgenutzt, dass der kritische Punkt von CO$^2$ in einer Druckkammer erreicht werden kann und hier eine Trocknung ohne Verdampung möglich ist, sodass feinporöse Strukturen nicht zerstört werden.
+
+Da biologische Proben größtenteils aus leichten Elementen bestehen, ist in der Regel Absorption, elastische und inelastische Streuung gerin, weshalb der Einsatz von Kontrastmitteln (z.B. Osmium(VIII)-oxid) nötig ist.
+Diese bringen schwere Elemente (Blei, Uran, Osmium) in die Probe ein, die sich an unterschiedlichen Strukturen besser oder schlechter anlagern und können hier als letzter Schritt aufgebracht werden.
+
+Als Alternative zur chemischen Fixierung kann die Cryo-Fixierung genannt werden, die auf eine chemische Behandlung der Probe verzichtet, aber ein speziell dafür ausgerüstetes SEM benötigt.
+Hier wird auf ein so schnelles Einfrieren der Probe gesetzt, dass keine Eiskristalle entstehen können, welche die Probenstruktur (zer-)stören könnten.
+
+%Chemische Fixierung:
+% Fixation
+% Chem. Fixation
+% Dehydration (ethanol, acetone)
+%exchange of acetone with pressurized liquid co2
+%kritisch-Punkt-Trocknung
+%coating (contrast)
+% SEM
+
+%vermutlich egal, weil nicht gemacht, vielleicht nur erwähnen, dass es existiert; Vorteil=no chemical treatment:
+% Cryo-Fixierung:
+% Fixation
+% Cryo-Fixation
+% freeze-fracturing
+% partial freeze-drying
+% coating (contrast)
+% Cryo-SEM
+
+
+
 \subsection{TEM}
 
 Transmissionselektronenmikroskopie (TEM) erlaubt aufgrund der geringen Wellenlänge hochenergetischer Elektronen, Auflösungen zu erreichen, die mit Lichtmikroskopie aufgrund des Abbe-Limits unmöglich sind.
-So kann mittels STEM (scanning transmission electron microscopy) in kristallinen Proben subatomare Auflösung, also die Visualisierung einzelner Orbitale, erreicht werden. %TODO kp, ob hier der Ausflug zu STEM Sinn ergibt.
-Auch in biologischen Proben können Strukturen beobachtet werden, die im Lichtmikroskop nicht zugänglich sind. %TODO biologisch/organisch/?
+So kann mittels STEM (scanning transmission electron microscopy) in kristallinen Proben subatomare Auflösung, also die Visualisierung einzelner Orbitale, erreicht werden.
+Auch in biologischen Proben können Strukturen beobachtet werden, die im Lichtmikroskop nicht zugänglich sind.
 Als Bild ergibt sich so auf dem Leuchtschirm ein Abbildung der Probe, in der für Elektronen schlecht durchlässige Bereiche dunkler als durchlässigere Bereiche erscheinen.
 Im Allgemeinen sind Elemente höherer Ordnungszahl schlechter durchlässig.
-%TODO Wenn der Typ STEM, Dunkelfeld gemacht hat oder sonst irgendwas spezielles, sollte ich das erwähnen, aber iirc hat er nicht.
+%Wenn der Typ STEM, Dunkelfeld gemacht hat oder sonst irgendwas spezielles, sollte ich das erwähnen, aber hat er nicht.
 
 \subsection{Probenpräparation für TEM}
 %sample preperation requirements: vakuum, conductive for sem, thin for tem etc.
 
-TEM erfordert im Gegensatz zu SEM extrem dünn geschnittene Proben (TODO), damit ausreichend viele Elektronen die Probe durchqueren, um ein Signal zu messen. %TODO welche Dicke etwa?
+Ähnlich wie in der SEM lassen sich auch hier vor allem zwei Methoden unterscheiden.\cite{MyScope}
+
+In der chemischen Methode wird zunächst Wasser in der Probe durch Aceton ersetzt.
+Dann wird das Lösemittel graduell durch ein Harz ersetzt, welches die Probe aushärtet.
+Mittels eines speziellen Messers werden dann dünne Scheiben von der Probe abgetrennt und auf TEM-Netze transferiert.
+Dies ist nowendig, da TEM im Gegensatz zu SEM extrem dünn geschnittene Proben erfordert, damit ausreichend viele Elektronen die Probe durchqueren, um ein Signal zu messen. %TODO welche Dicke etwa?
+Auch hier werden Kontrastmittel, die schwere Elemente beinhalten, aufgetragen.
 % Aufbringen auf Tem-Netze
 
+Die andere Methode ist die Cryo-Fixierung, wobei mit einer gefrorenen Probe angefangen wird, die während des Einbringens des Harzes langsam aufgetaut wird.
+Dieser Prozess dauert mehrere Tage bis zu Wochen.
 
-\subsection{Astigmatismus} %TODO schauen, ob das Strukturell woanders besser passt und ob es ne eigene Überschrift braucht.
+%Chemische Fixierung:
+% 1. Fixation
+% 2. Dehydration
+% 3. Embedding
+% 4. Thin sectioning
+% 5. Staining (uranyl-acetate, lead-cytrate)
+
+%Cryo-Fixierung
+% analog, außer am anfang gefroren und ca. während embedding aufgetaut, takes days-weeks
+
+\subsection{Astigmatismus}
 
 Astigmatismus tritt sowohl im TEM als auch im SEM auf, wenn Elektronen in unterschiedlichen Bildrichtungen eine unterschiedliche Fokusebene haben.
 Astigmatismus entsteht durch Herrstellungsfehler in den Polstücken der Linsen.
 Ein hoher Astigmatismus sorgt für eine Verzerrung oder Unschärfe des Bildes in einer Bildrichtung. \cite{MyScope}
 Korrigieren lässt sich Astigmatismus durch Stigmatoren (Oktupole) in Kondensator- und Objektivlinsen, mithilfe deren man ein Feld aufbaut, das diese Herrstellungsfehler ausgleicht.
 
-\section{Durchführung}
+%\section{Durchführung}
 
 %actual sample preperation
 
