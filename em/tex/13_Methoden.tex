@@ -3,17 +3,18 @@
 %TODO Ausführliche Beschreibung der drei (2?) Methoden. Vielleicht Theorieteil vorschieben, aber vlt. nicht nötig
 
 \subsection{SEM}
+\label{sec:SEM}
 
 Die Rasterelektronenmikroskopie (SEM von engl. scanning electron microscopy) ist eine Technik zur hochauflösenden Untersuchung von Oberflächen.
 Sie wird in vielen Feldern eingesetzt, z.B. in Medizin, Materialwissenschaften, Halbleiterindustrie und forensischen Laboren.
 In \cref{fig:sem_schematic} ist schamatisch ein typischer Aufbau eines SEM dargestellt.
 Der auf die Probenebene fokussierte Elektronenstrahl wird rasterförmig über die Probe gefahren und verschiedene Detektoren können genutzt werden, um zeitgleich ein ortsaufgelöstes Bild der Probe aufzunehmen.
-Hier können Sekundärelektronen (SE), rückgestreute Elektronen (BSE von engl. backscattered electrons), transmittierte Elektronen (STEM von engl. scanning transmission electron microscopy), Kathodolumineszenz (CL) und Röntgenstrahlung (X-ray) detektiert werden. %TODO erwähnen, dass stem getrennt ist, falls das andere stem und nicht nur tem ist.
-Mit Ausnahme von STEM befinden sich die Detektoren oberhalb von der Probe, sodass nur die Oberfläche der Probe (bis zu unterschiedlicher Tiefe je nach Methdoe) untersucht wird und ein Dünnschnitt der Probe nicht nötig ist.
+Hier können Sekundärelektronen (SE), rückgestreute Elektronen (BSE von engl. backscattered electrons), transmittierte Elektronen (STEM von engl. scanning transmission electron microscopy), Kathodolumineszenz (CL) und Röntgenstrahlung (X-ray) detektiert werden.
+Mit Ausnahme von STEM befinden sich die Detektoren oberhalb der Probe, sodass nur die Oberfläche der Probe (bis zu unterschiedlicher Tiefe je nach Methode) untersucht wird und ein Dünnschnitt der Probe nicht nötig ist.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.65\textwidth]{img/sem_schematic}
+    \includegraphics[width=\textwidth]{img/sem_schematic}
     \caption{
     Schematische Darstellung eines konventionellen SEM.
     Die evakuierte Mikroskopsäule (im gestrichelten Rahmen) beinhaltet die Elektronenkanone, elektromagnetische Linsen, Blenden, Probenebene und Detektoren. \cite{springer-handbook}
@@ -27,25 +28,35 @@ Sekundärelektronen sind dadurch definiert, dass sie eine Energie von weniger al
 Rückgestreute Elektronen werden zu einem kleinen Teil dadurch erklärt, dass ein kleiner Teil der Primärelektronen mit hohem Streuwinkel $\theta > \SI{90}{\degree}$ in Richtung Elektronenkanone zurückgestreut werden und dabei wenig bis keine Energie verlieren.
 Da solche Streuprozesse jedoch relativ unwahrscheinlich sind, spielen im BSE-Signal Elektronen, die nach mehreren elastischen Streuprozessen die Probe verlassen die größere Rolle.
 Je nach Probeneigenschaften und Primärenergie ergibt sich eine maximale Austrittstiefe, aus der Elektronen nachgewiesen werden können.
-Üblicherweise befinden sich BSE-Detektoren auf einer Seite der Elektronenkanone, sodass Elektronen, die in diese Richtung austreten detektiert werden.
+Üblicherweise befinden sich BSE-Detektoren auf einer Seite der Elektronenkanone, sodass vornehmlich Elektronen, die in diese Richtung austreten, detektiert werden.
 Da dies bei Oberflächen, die dem Detektor zugewandt sind, wahrscheinlicher ist, ergibt sich ein oberflächenorientierungsabhängiges Signal, das mit einem Schattenwurf in Lichtbildaufnahmen vergleichbar ist.
 Außerdem nimmt die Wahrscheinlichkeit, dass Elektronen rückgestreut werden, mit der Ladungszahl zu, sodass BSE-Bilder chemischen Kontrast zeigen können (vgl. \cref{fig:bse-schatten}).
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.65\textwidth]{img/bse-example}
+    \begin{subfigure}{0.505\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/se-example}
+    \caption{SE}
+    \end{subfigure}
+    %\hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/bse-example}
+        \caption{BSE}
+    \end{subfigure}
     \caption{
-     BSE-Aufnahme einer \SI{1}{mm} großen Stahlkugel. \cite{springer-handbook}
+     SE- und BSE-Aufnahme einer \SI{1}{mm} großen Stahlkugel. \cite{springer-handbook}
     }
     \label{fig:bse-schatten}
 \end{figure}
 
-Sekundärelektronen entstehen durch inelastische Streuung von hochenergetischen Elektronen mit Probenatomen.
+Sekundärelektronen entstehen durch inelastische Streuung hochenergetischer Elektronen mit Probenatomen.
 Hierbei wird Energie auf Elektronen in der Probe übertragen, welche aus ihrem Atompotenzial gelöst werden und danach die Energiedifferenz zwischen übertragener Energie und Ionisationsenergie als kinetische Energie besitzen.
 Ist die kinetische Energie ausreichend groß und findet die Ionisation ausreichend nah an der Probenoberfläche statt, kann das Elektron die Probe verlassen und nachgewiesen werden. %2nm
-Flächen, die nicht senkrecht zum Primärstrahl stehen begünstigen die Austrittswahrscheinlichkeit, wodurch SE-Bilder Informationen über die Topographie der Probe beinhalten.
+Flächen, die nicht senkrecht zum Primärstrahl stehen, begünstigen die Austrittswahrscheinlichkeit, wodurch SE-Bilder Informationen über die Topographie der Probe beinhalten.
 
-Der Detektor kann sowohl das Objektivlinsensystem des Primärstrahls nutzen (through-the-lens detection) und somit parallel zum Primärstrahl messen oder seitlich montiert sein, wobei ebenfalls ein virtueller Schattenwurf erzeugt wird, der größer ist, als bei rückgestreuten Elektronen.
+Der Detektor kann sowohl das Objektivlinsensystem des Primärstrahls nutzen (through-the-lens detection) und somit parallel zum Primärstrahl messen oder seitlich montiert sein, wobei ebenfalls ein virtueller Schattenwurf erzeugt wird. \cite{springer-handbook}
 In beidem Fällen wird ein Spannungsgradient verwendet, um möglichst viele Elektronen \enquote{einzusammeln}.
 
 \subsection{Probenpräparation für SEM}
@@ -54,18 +65,18 @@ In beidem Fällen wird ein Spannungsgradient verwendet, um möglichst viele Elek
 
 Zunächst einmal ist es wichtig, dass dicke Proben (z.B. ganze Insekten) mit einer leitenden Schicht (üblicherweise Gold) beschichtet werden, um elektrostatische Aufladungen der untersuchten Stelle zu verhindern.
 
-Des Weiteren stellt sich bei biologischen Proben das Problem, dass, damit diese in die Vakuumkammer eingebracht werden können, Wasser aus der Probe entfernt werden muss.
-Wäre dies nicht der Fall, würde die Probe ins Vakuum ausgasen.
+Des Weiteren stellt sich bei biologischen Proben das Problem, dass, damit diese in die Vakuumkammer eingebracht werden können, das Wasser aus der Probe entfernt werden muss.
+Passierte dies nicht, würde die Probe ins Vakuum ausgasen.
 Da Trocknung an der Luft häufig zu einer Zerstörung der zu untersuchenden Strukturen führt, gibt es Methoden, die Struktur der Probe während der Fixierung möglichst gut zu erhalten.
 
-Die Methode der chemischen Fixierung verwendet verschiedene Chemikalien (u.a. Glutaraldehyd, Formaldehyd, and Acrolein), um Verbindungen zwischen Aminosäuren, Proteinen und Lipiden herzustellen (üblicherweise durch kovalente Bindungen). \cite{bitesize}
+Die Methode der chemischen Fixierung verwendet verschiedene Chemikalien (u.a. Glutaraldehyd, Formaldehyd und Acrolein), um Verbindungen zwischen Aminosäuren, Proteinen und Lipiden herzustellen (üblicherweise durch kovalente Bindungen). \cite{bitesize}
 Diese Chemikalien werden in einer Pufferlösung (isotonische Trägerflüssigkeit) eingebracht, um so die Morphologie der Probe zu erhalten.
-Um dann das Wasser aus der Probe zu Verdrängen wird dieses zuerst langsam durch Ethanol (oder Aceton) ersetzt und dann in einer Druckkammer durch flüssiges CO$^2$.
+Um dann das Wasser aus der Probe zu verdrängen, wird dieses zuerst langsam durch Ethanol (oder Aceton) ersetzt und dann in einer Druckkammer durch flüssiges CO$^2$.
 Der Zwischenschritt über Ethanol ist nötig, da sich CO$^2$ nicht mit Wasser lösen lässt.
 Dann wird ausgenutzt, dass der kritische Punkt von CO$^2$ in einer Druckkammer erreicht werden kann und hier eine Trocknung ohne Verdampung möglich ist, sodass feinporöse Strukturen nicht zerstört werden.
 
-Da biologische Proben größtenteils aus leichten Elementen bestehen, ist in der Regel Absorption, elastische und inelastische Streuung gerin, weshalb der Einsatz von Kontrastmitteln (z.B. Osmium(VIII)-oxid) nötig ist.
-Diese bringen schwere Elemente (Blei, Uran, Osmium) in die Probe ein, die sich an unterschiedlichen Strukturen besser oder schlechter anlagern und können hier als letzter Schritt aufgebracht werden.
+Da biologische Proben größtenteils aus leichten Elementen bestehen, ist in der Regel Absorption, elastische und inelastische Streuung gering, weshalb der Einsatz von Kontrastmitteln (z.B. Osmium(VIII)-oxid) nötig ist.
+Diese bringen schwere Elemente (Blei, Uran, Osmium) in die Probe ein, die sich an unterschiedlichen Strukturen besser oder schlechter anlagern, und können hier als letzter Schritt aufgebracht werden.
 
 Als Alternative zur chemischen Fixierung kann die Cryo-Fixierung genannt werden, die auf eine chemische Behandlung der Probe verzichtet, aber ein speziell dafür ausgerüstetes SEM benötigt.
 Hier wird auf ein so schnelles Einfrieren der Probe gesetzt, dass keine Eiskristalle entstehen können, welche die Probenstruktur (zer-)stören könnten.
@@ -94,20 +105,20 @@ Hier wird auf ein so schnelles Einfrieren der Probe gesetzt, dass keine Eiskrist
 
 Transmissionselektronenmikroskopie (TEM) erlaubt aufgrund der geringen Wellenlänge hochenergetischer Elektronen, Auflösungen zu erreichen, die mit Lichtmikroskopie aufgrund des Abbe-Limits unmöglich sind.
 So kann mittels STEM (scanning transmission electron microscopy) in kristallinen Proben subatomare Auflösung, also die Visualisierung einzelner Orbitale, erreicht werden.
-Auch in biologischen Proben können Strukturen beobachtet werden, die im Lichtmikroskop nicht zugänglich sind.
-Als Bild ergibt sich so auf dem Leuchtschirm ein Abbildung der Probe, in der für Elektronen schlecht durchlässige Bereiche dunkler als durchlässigere Bereiche erscheinen.
+Auch in biologischen Proben können mittels TEM Strukturen beobachtet werden, die im Lichtmikroskop nicht zugänglich sind.
+Als Bild ergibt sich so auf dem Leuchtschirm eine Abbildung der Probe, in der für Elektronen schlecht durchlässige Bereiche dunkler als durchlässigere Bereiche erscheinen.
 Im Allgemeinen sind Elemente höherer Ordnungszahl schlechter durchlässig.
 %Wenn der Typ STEM, Dunkelfeld gemacht hat oder sonst irgendwas spezielles, sollte ich das erwähnen, aber hat er nicht.
 
 \subsection{Probenpräparation für TEM}
 %sample preperation requirements: vakuum, conductive for sem, thin for tem etc.
 
-Ähnlich wie in der SEM lassen sich auch hier vor allem zwei Methoden unterscheiden.\cite{MyScope}
+Ähnlich wie in der SEM lassen sich auch hier vor allem zwei Methoden unterscheiden.
 
 In der chemischen Methode wird zunächst Wasser in der Probe durch Aceton ersetzt.
-Dann wird das Lösemittel graduell durch ein Harz ersetzt, welches die Probe aushärtet.
+Dann wird das Lösemittel graduell durch ein Harz ersetzt, welches die Probe aushärtet. \cite{bitesize}
 Mittels eines speziellen Messers werden dann dünne Scheiben von der Probe abgetrennt und auf TEM-Netze transferiert.
-Dies ist nowendig, da TEM im Gegensatz zu SEM extrem dünn geschnittene Proben erfordert, damit ausreichend viele Elektronen die Probe durchqueren, um ein Signal zu messen. %TODO welche Dicke etwa?
+Dies ist nowendig, da TEM im Gegensatz zu SEM extrem dünn geschnittene Proben erfordert, damit ausreichend viele Elektronen die Probe durchqueren, um ein Signal zu messen.
 Auch hier werden Kontrastmittel, die schwere Elemente beinhalten, aufgetragen.
 % Aufbringen auf Tem-Netze
 
